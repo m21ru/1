@@ -3,11 +3,15 @@ namespace cmd1
 {
     public class AppCore
     {
+        DateTime selectDate;
+        const string base_path = "~/site_base/";
+
         /// <summary>
         /// Default constructor
         /// </summary>
         public AppCore()
         {
+            selectDate = new DateTime();
         }
 
         /// <summary>
@@ -18,8 +22,24 @@ namespace cmd1
 
         }
 
-        private DateTime SetDate()
+        public bool SetDate(string strDate)
         {
+            DateTime date = new DateTime();
+            string msg;
+
+            bool bRes = DateTime.TryParse(strDate, out date);
+            if (false == bRes)
+            {
+                msg = "date or date format error";
+            }
+            else
+            {
+                msg = date.ToString("yyyy-MM-dd");
+                selectDate = date;
+            }
+            Console.WriteLine(msg);
+
+            return bRes;
 
         }
 
