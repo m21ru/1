@@ -6,7 +6,7 @@ namespace cmd1
     {
         static void Main(string[] args)
         {
-            
+            AppCore appCore = new AppCore();
         }
     }
 }
