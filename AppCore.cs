@@ -18,6 +18,11 @@ namespace cmd1
 
         }
 
+        private DateTime SetDate()
+        {
+
+        }
+
         public void ReadHtmlsFromDisk(DateTime date, string city_prefix)
         {
 
