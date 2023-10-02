@@ -4,6 +4,8 @@ namespace cmd1
     public class AppCore
     {
         DateTime selectDate;
+
+        // default path to inf
         const string base_path = "~/site_base/";
 
         /// <summary>
